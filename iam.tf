@@ -65,7 +65,7 @@ data "aws_iam_policy_document" "policy" {
 # supports in-line policy 
 resource "aws_iam_policy" "policy" {
   name   = "${local.namespace}-tf-policy"
-  path = "/"
+  path   = "/"
   policy = data.aws_iam_policy_document.policy.json
 }
 
